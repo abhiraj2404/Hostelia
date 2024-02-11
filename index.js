@@ -32,6 +32,10 @@ app.get('/login', (req, res) => {
     res.render('login.ejs')
 })
 
+app.get('/signup', (req, res) => {
+    res.render('signup.ejs')
+})
+
 app.get('/problems', async (req, res) => {
     const problems = await Problem.find({});
     res.render('problems.ejs', { problems });
